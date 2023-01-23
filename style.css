@@ -1,0 +1,274 @@
+/* CSS RESET */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* CSS VARIABLES */
+:root{
+    --navbar-height: 59px
+}
+
+/* navigation bar: logo and image*/
+#logo{
+    display: flex;
+    margin: 20px 30px;
+    padding: 10px;
+}
+
+#logo img{
+    margin: 1px 4px;
+    height: 50px;
+    width: 56px;
+    /* border-radius: 100px; */
+}
+
+/* navigation bar */
+#navbar{
+    display: flex;
+    align-items: center;
+    position: fixed;
+    height: 70px;
+    width: 100vw;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#navbar::before{
+    content:"";
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+/* navigation bar: list styling */
+#navbar ul{
+    display: flex;
+}
+
+#navbar ul li{
+    list-style: none;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+    transform: scale(1.1);
+}
+
+/* home section */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before{
+    content:"";
+    background: url('../img/web2/mountainbg2.jpg') no-repeat center center/cover;
+    height: 100%;
+    top:0px;
+    left: 0px;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+#home h1{
+    color: rgb(88, 24, 24);
+    font-weight: bolder;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#home p{
+    color: rgb(88, 24, 24);
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: center;
+    margin: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* services section */
+#services{
+    margin: 34px;
+    display: flex;
+}
+
+#services .box{
+    /* border: 2px solid red; */
+    margin: 5px;
+    padding: 10px;
+    background-color:rgba(202, 156, 28, 0.5);
+    box-shadow: 2px 2px 5px burlywood;
+}
+
+.services-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+    flex-direction: column;
+    /* border: 2px solid red; */
+}
+
+.services-container h1{
+    /* border: 2px solid red; */
+    padding-top: 70px;
+}
+
+#services .box img{
+    height: 300px;
+    width: 450px;
+    display: block;
+    margin: auto;
+    padding: 2px;
+}
+
+.services-container h1{
+    color: rgb(88, 24, 24);
+    font-family: 'Montserrat', sans-serif;
+}
+
+#services .box p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+}
+
+/* Clients Section */
+#client-section{
+    position: relative;
+    height: 344px;
+    margin-bottom: 40px;
+}
+
+#client-section h1{
+    margin-top: 84px;
+}
+
+#client-section::before{
+    content:"";
+    background: url('../img/web2/world-bg.jpg') no-repeat center center/cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    position: relative;
+    z-index: -1;
+}
+
+#clients img{
+    height: 90px;
+}
+
+.client-item{
+    padding: 30px;
+}
+
+/* contact us section */
+#contact{
+    position: relative;
+    margin-top: 120px;
+}
+
+#contact::before{
+    content: "";
+    background: url('../img/web2/bg1.jpg') no-repeat center center/cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 40px;
+}
+#contact-box input, textarea{
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 5px rgb(88, 24, 24);
+}
+
+#contact-box form{
+    width: 40%;
+    font-size: 1.1rem;
+    color: rgb(88, 24, 24);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+/* footer: */
+footer{
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+}
+
+/* utility classes */
+.h-primary{
+    font-size: 2.8rem;
+    padding: 30px;
+    font-family: 'Montserrat', sans-serif;
+    color:rgb(64, 9, 9);
+}
+
+.btn{
+    padding: 6px 20px;
+    margin-bottom: -50px;
+    margin-top: 22px;
+    border: 2px solid burlywood;
+    background-color: rgb(181, 128, 60);
+    font-size: 1rem;
+    border-radius: 10px;
+}
+.btn a{
+    text-decoration: none;
+    color: rgb(88, 24, 24);
+}
+
+button:hover{
+    color: rgb(64, 9, 9);
+    background-color:rgb(223, 185, 136);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.text-center{
+    text-align: center;
+}
+
+.h-secondary{
+    font-size: 1.8rem;
+    padding: 30px;
+    font-family: 'Montserrat', sans-serif;
+    color:rgb(64, 9, 9);
+}
